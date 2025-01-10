@@ -1,0 +1,329 @@
+/* ---------- Paleta de Cores ---------- */
+:root {
+    --cor-vermelho: #D32F2F; /* Cor predominante (vermelho da Pokébola) */
+    --cor-branco: #FFFFFF; /* Branco (base da Pokébola) */
+    --cor-preto: #212121; /* Preto (detalhes da Pokébola) */
+    --cor-cinza: #BDBDBD; /* Cinza (elementos secundários da Pokébola) */
+    --cor-bg: #F5F5F5; /* Cinza claro para fundo */
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('fonts/Orbitron-Regular.ttf') format('truetype'),
+         url('fonts/Orbitron-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('fonts/Orbitron-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Tornar a logo redonda */
+.logo-rounded {
+    width: 80px; /* Certifique-se de que a largura está definida */
+    height: 80px; /* Altura igual à largura para formar um círculo */
+    border-radius: 50%; /* Faz com que a imagem fique redonda */
+    border: 2px solid var(--cor-preto); /* Borda preta ao redor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    object-fit: cover; /* Garante que a imagem se ajuste corretamente */
+}
+
+
+/* ---------- Estilo Global ---------- */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ---------- Fundo do Site ---------- */
+/* ---------- Fundo do Site ---------- */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bg_site.png'); /* Caminho para a imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz o fundo permanecer fixo ao rolar a página */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    color: var(--cor-preto); /* Cor padrão do texto */
+}
+
+/* ---------- Seções com Transparência ---------- */
+section {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* Branco com 85% de opacidade */
+    border-radius: 10px; /* Bordas arredondadas para suavizar */
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
+/* ---------- Sobre ---------- */
+#sobre {
+    background-color: rgba(211, 47, 47, 0.85); /* Vermelho transparente */
+}
+
+/* ---------- Subir Deck ---------- */
+#subir-deck {
+    background-color: rgba(33, 33, 33, 0.85); /* Preto transparente */
+}
+
+/* ---------- Decks ---------- */
+#decks {
+    background-color: rgba(189, 189, 189, 0.85); /* Cinza transparente */
+}
+
+/* ---------- Contato ---------- */
+#contato {
+    background-color: rgba(245, 245, 245, 0.85); /* Cinza claro transparente */
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    background-color: rgba(211, 47, 47, 0.75); /* Vermelho transparente */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+    border-radius: 10px;
+    padding: 80px 20px;
+}
+
+/* ---------- Cabeçalho ---------- */
+.header {
+    background-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--cor-preto);
+}
+
+.header .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header .nav-link {
+    color: var(--cor-branco);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header .nav-link:hover {
+    color: var(--cor-cinza);
+}
+
+/* Estilo para tornar o ícone arredondado */
+.logo-rounded {
+    border-radius: 50%; /* Torna a imagem circular */
+    border: 2px solid var(--cor-preto); /* Adiciona uma borda preta */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+    object-fit: cover; /* Garante que a imagem se ajuste corretamente */
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.8)
+    ), url('images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--cor-branco);
+    position: relative;
+    padding: 60px 20px;
+}
+
+.hero-overlay {
+    background-color: rgba(255, 255, 255, 0.1); /* Suaviza o fundo */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-danger {
+    border: 2px solid var(--cor-preto); /* Borda preta */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: var(--cor-preto); /* Fundo preto ao passar o mouse */
+    color: var(--cor-branco); /* Texto branco */
+    transform: scale(1.1); /* Leve aumento */
+}
+
+/* Estilo adicional para o botão */
+.btn-danger {
+    border: 2px solid var(--cor-preto); /* Adiciona uma borda preta */
+    transition: all 0.3s ease-in-out; /* Suaviza as transições */
+}
+
+.btn-danger:hover {
+    background-color: var(--cor-preto); /* Muda o fundo para preto ao passar o mouse */
+    color: var(--cor-branco); /* Texto branco */
+    transform: scale(1.1); /* Aumenta ligeiramente o botão */
+}
+
+/*------------- Subir Deck--------------------*/
+#subir-deck {
+    background-color: var(--cor-cinza); /* Fundo rosa claro */
+    color: var(--cor-preto);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#subir-deck h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-preto);
+}
+
+#subir-deck p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#subir-deck form {
+    background-color: var(--cor-branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#subir-deck .form-label {
+    color: var(--cor-preto);
+    font-weight: bold;
+}
+
+#subir-deck .form-control {
+    border: 1px solid var(--cor-cinza);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#subir-deck .form-control:focus {
+    border-color: var(--cor-vermelho);
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+#subir-deck textarea {
+    resize: vertical; /* Permite redimensionar verticalmente, mas não horizontalmente */
+    font-family: 'Arial', sans-serif; /* Define uma fonte legível para texto longo */
+    font-size: 1rem;
+    color: var(--cor-preto);
+}
+
+#subir-deck button[type="submit"], .btn-danger {
+    background-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+/* ---------- Decks ---------- */
+.deck-card {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    border: 1px solid var(--cor-cinza);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.deck-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+.deck-card i {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.deck-card:hover i {
+    transform: scale(1.2);
+    color: var(--cor-vermelho); /* Destaque ao passar o mouse */
+}
+
+
+/* ---------- Contato ---------- */
+#contato p {
+    font-size: 1.2rem;
+    color: var(--cor-preto);
+    margin-top: 20px;
+}
+
+#contato a {
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#contato a:hover {
+    color: var(--cor-vermelho);
+}
+
+/* ---------- Rodapé ---------- */
+.footer {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
